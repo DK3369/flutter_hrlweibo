@@ -242,7 +242,7 @@ class _SettingPageState extends State<SettingPage> {
                           return AlertDialog(
                             content: Text('退出登录?'),
                             actions: <Widget>[
-                              FlatButton(
+                              TextButton(
                                 child: Text('确定'),
                                 onPressed: () {
                                   UserUtil.loginout();
@@ -253,7 +253,7 @@ class _SettingPageState extends State<SettingPage> {
                                       transition: TransitionType.fadeIn);
                                 },
                               ),
-                              FlatButton(
+                              TextButton(
                                 child: Text('取消'),
                                 onPressed: () {
                                   Navigator.of(context).pop();

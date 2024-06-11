@@ -391,15 +391,15 @@ class _ChatBottomInputWidgetState extends State<ChatBottomInputWidget>
     return Container(
       width: 60,
       height: 30,
-      child: new RaisedButton(
-        padding: EdgeInsets.all(0),
-        color: Color(0xffFF8200),
-        textColor: Colors.white,
-        disabledTextColor: Colors.white,
-        disabledColor: Color(0xffFFD8AF),
-        elevation: 0,
-        disabledElevation: 0,
-        highlightElevation: 0,
+      child: new TextButton(
+        // padding: EdgeInsets.all(0),
+        // color: Color(0xffFF8200),
+        // textColor: Colors.white,
+        // disabledTextColor: Colors.white,
+        // disabledColor: Color(0xffFFD8AF),
+        // elevation: 0,
+        // disabledElevation: 0,
+        // highlightElevation: 0,
         onPressed: () {
           widget.onSendCallBack?.call(mEditController.text.trim());
           mEditController.clear();

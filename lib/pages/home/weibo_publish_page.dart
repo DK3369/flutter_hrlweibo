@@ -252,9 +252,9 @@ class _WeiBoPublishPageState extends State<WeiBoPublishPage> {
                     // 如果已添加了9张图片，则提示不允许添加更多
                     num size = mFileList.length;
                     if (size >= 9) {
-                      Scaffold.of(context).showSnackBar(SnackBar(
-                        content: Text("最多只能添加9张图片！"),
-                      ));
+                      // Scaffold.of(context).showSnackBar(SnackBar(
+                      //   content: Text("最多只能添加9张图片！"),
+                      // ));
                       return;
                     }
                     final ImagePicker _picker = ImagePicker();

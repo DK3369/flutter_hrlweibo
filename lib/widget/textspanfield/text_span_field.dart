@@ -71,12 +71,19 @@ class _TextSpanFieldSelectionGestureDetectorBuilder
             cause: SelectionChangedCause.longPress,
           );
           break;
+        case TargetPlatform.linux:
+          // TODO: Handle this case.
+        case TargetPlatform.macOS:
+          // TODO: Handle this case.
+        case TargetPlatform.windows:
+          // TODO: Handle this case.
       }
     }
   }
 
   @override
-  void onSingleTapUp(TapUpDetails details) {
+  void onTapUp(TapUpDetails details) {
+    // void onSingleTapUp(TapUpDetails details) {
     editableText.hideToolbar();
     if (delegate.selectionEnabled) {
       switch (Theme.of(_state.context).platform) {
@@ -87,6 +94,12 @@ class _TextSpanFieldSelectionGestureDetectorBuilder
         case TargetPlatform.fuchsia:
           renderEditable.selectPosition(cause: SelectionChangedCause.tap);
           break;
+        case TargetPlatform.linux:
+          // TODO: Handle this case.
+        case TargetPlatform.macOS:
+          // TODO: Handle this case.
+        case TargetPlatform.windows:
+          // TODO: Handle this case.
       }
     }
     _state._requestKeyboard();
@@ -108,6 +121,12 @@ class _TextSpanFieldSelectionGestureDetectorBuilder
           renderEditable.selectWord(cause: SelectionChangedCause.longPress);
           Feedback.forLongPress(_state.context);
           break;
+        case TargetPlatform.linux:
+          // TODO: Handle this case.
+        case TargetPlatform.macOS:
+          // TODO: Handle this case.
+        case TargetPlatform.windows:
+          // TODO: Handle this case.
       }
     }
   }
@@ -846,8 +865,9 @@ class _TextSpanFieldState extends State<TextSpanField>
       if (_effectiveController.value.text.runes.length > widget.maxLength!) {
         return effectiveDecoration.copyWith(
           errorText: effectiveDecoration.errorText ?? '',
-          counterStyle: effectiveDecoration.errorStyle ??
-              themeData.textTheme.caption!.copyWith(color: themeData.errorColor),
+          // counterStyle: effectiveDecoration.errorStyle ??
+          //     themeData.textTheme.caption!.copyWith(color: themeData.errorColor),
+          counterStyle: effectiveDecoration.errorStyle,
           counterText: counterText,
           semanticCounterText: semanticCounterText,
         );
@@ -934,6 +954,12 @@ class _TextSpanFieldState extends State<TextSpanField>
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
       // Do nothing.
+      case TargetPlatform.linux:
+        // TODO: Handle this case.
+      case TargetPlatform.macOS:
+        // TODO: Handle this case.
+      case TargetPlatform.windows:
+        // TODO: Handle this case.
     }
   }
 
@@ -966,9 +992,10 @@ class _TextSpanFieldState extends State<TextSpanField>
     );
 
     final ThemeData themeData = Theme.of(context);
-    final TextStyle style = themeData.textTheme.subtitle1!.merge(widget.style);
+    final TextStyle style = themeData.textTheme.titleMedium!.merge(widget.style);
+    // primaryColorBrightness
     final Brightness keyboardAppearance =
-        widget.keyboardAppearance ?? themeData.primaryColorBrightness;
+        widget.keyboardAppearance ?? themeData.colorScheme.brightness;
     final TextEditingController controller = _effectiveController;
     final FocusNode focusNode = _effectiveFocusNode;
     final List<TextInputFormatter> formatters =
@@ -1001,8 +1028,16 @@ class _TextSpanFieldState extends State<TextSpanField>
         textSelectionControls = materialTextSelectionControls;
         paintCursorAboveText = false;
         cursorOpacityAnimates = false;
-        cursorColor ??= themeData.cursorColor;
+        // cursorColor ??= themeData.cursorColor;
+        cursorColor ??= themeData.canvasColor;
+
         break;
+      case TargetPlatform.linux:
+        // TODO: Handle this case.
+      case TargetPlatform.macOS:
+        // TODO: Handle this case.
+      case TargetPlatform.windows:
+        // TODO: Handle this case.
     }
 
     Widget child = RepaintBoundary(
@@ -1029,7 +1064,9 @@ class _TextSpanFieldState extends State<TextSpanField>
         maxLines: widget.maxLines,
         minLines: widget.minLines,
         expands: widget.expands,
-        selectionColor: themeData.textSelectionColor,
+        selectionColor: themeData.canvasColor,
+
+        // selectionColor: themeData.textSelectionColor,
         selectionControls:
             widget.selectionEnabled ? textSelectionControls : null,
         onChanged: widget.onChanged,

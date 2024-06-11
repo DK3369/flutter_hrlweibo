@@ -369,7 +369,7 @@ Widget textContent(String mTextContent, BuildContext context, bool isDetail) {
                       content: new Text("点击全文了"),
                       actions: <Widget>[
                         // usually buttons at the bottom of the dialog
-                        new FlatButton(
+                        new TextButton(
                           child: new Text("Close"),
                           onPressed: () {},
                         ),

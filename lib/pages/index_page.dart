@@ -75,7 +75,7 @@ class _IndexPageState extends State<IndexPage> {
   final List<Widget> tabBodies = [
     HomePage(),
     VideoPage(),
-    FindPage( ),
+    FindPage(),
     MessagePage(),
     MinePage()
   ];

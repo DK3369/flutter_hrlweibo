@@ -74,15 +74,15 @@ class LikeButton extends StatefulWidget {
 
   const LikeButton(
       {  Key? key,
-        this.size: 30.0,
+        this.size = 30.0,
         required this.likeBuilder,
         required this.countBuilder,
         double? bubblesSize,
         double? circleSize,
         required  this.likeCount,
-        this.isLiked: false,
-        this.mainAxisAlignment: MainAxisAlignment.center,
-        this.crossAxisAlignment: CrossAxisAlignment.center,
+        this.isLiked = false,
+        this.mainAxisAlignment = MainAxisAlignment.center,
+        this.crossAxisAlignment = CrossAxisAlignment.center,
         this.animationDuration = const Duration(milliseconds: 1000),
         this.likeCountAnimationType = LikeCountAnimationType.part,
         this.likeCountAnimationDuration = const Duration(milliseconds: 500),
@@ -96,7 +96,7 @@ class LikeButton extends StatefulWidget {
         this.circleColor = const CircleColor(
             start: const Color(0xFFFF5722), end: const Color(0xFFFFC107)),
         required this.onTap,
-        this.countPostion: CountPostion.right,
+        this.countPostion = CountPostion.right,
           this.padding,
           this.countDecoration})
       : assert(size != null),

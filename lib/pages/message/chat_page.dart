@@ -306,7 +306,8 @@ class MyBehavior extends ScrollBehavior {
     if (Platform.isAndroid || Platform.isFuchsia) {
       return child;
     } else {
-      return super.buildViewportChrome(context, child, axisDirection);
+      return Container();
+      // return super.buildViewportChrome(context, child, axisDirection);
     }
   }
 }

@@ -247,7 +247,7 @@ class _MsgZanPageState extends State<MsgZanPage> {
                                         content: new Text("$url clicked."),
                                         actions: <Widget>[
                                           // usually buttons at the bottom of the dialog
-                                          new FlatButton(
+                                          new TextButton(
                                             child: new Text("Close"),
                                             onPressed: () {},
                                           ),
@@ -298,7 +298,7 @@ class _MsgZanPageState extends State<MsgZanPage> {
                                         content: new Text("点击的id:" + url),
                                         actions: <Widget>[
                                           // usually buttons at the bottom of the dialog
-                                          new FlatButton(
+                                          new TextButton(
                                             child: new Text("Close"),
                                             onPressed: () {},
                                           ),
@@ -356,7 +356,7 @@ class _MsgZanPageState extends State<MsgZanPage> {
                                         content: new Text("点击的id:" + url),
                                         actions: <Widget>[
                                           // usually buttons at the bottom of the dialog
-                                          new FlatButton(
+                                          new TextButton(
                                             child: new Text("Close"),
                                             onPressed: () {},
                                           ),

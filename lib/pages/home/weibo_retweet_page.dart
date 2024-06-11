@@ -250,7 +250,7 @@ class _RetWeetPageState extends State<RetWeetPage> {
                                         content: new Text("$url clicked."),
                                         actions: <Widget>[
                                           // usually buttons at the bottom of the dialog
-                                          new FlatButton(
+                                          new TextButton(
                                             child: new Text("Close"),
                                             onPressed: () {},
                                           ),
@@ -301,7 +301,7 @@ class _RetWeetPageState extends State<RetWeetPage> {
                                         content: new Text("点击的id:" + url),
                                         actions: <Widget>[
                                           // usually buttons at the bottom of the dialog
-                                          new FlatButton(
+                                          new TextButton(
                                             child: new Text("Close"),
                                             onPressed: () {},
                                           ),
@@ -359,7 +359,7 @@ class _RetWeetPageState extends State<RetWeetPage> {
                                         content: new Text("点击的id:" + url),
                                         actions: <Widget>[
                                           // usually buttons at the bottom of the dialog
-                                          new FlatButton(
+                                          new TextButton(
                                             child: new Text("Close"),
                                             onPressed: () {},
                                           ),

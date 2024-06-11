@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 
 /// 范围样式，规定不同范围不同样式
-class RangeStyle extends Comparable<RangeStyle> {
+// class RangeStyle extends Comparable<RangeStyle> {
+class RangeStyle {
+
   RangeStyle({ required this.range, this.style});
 
   /// 范围

@@ -11,8 +11,8 @@ class DioManager {
   DioManager._internal() {
     var options = BaseOptions(
       baseUrl: Constant.baseUrl,
-      connectTimeout: 5000,
-      receiveTimeout: 3000,
+      connectTimeout: Duration(seconds: 50),
+      receiveTimeout: Duration(seconds: 30),
     );
     dio = Dio(options);
   }
